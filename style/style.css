@@ -1,0 +1,235 @@
+:root {
+	--white: #fff;
+	--pale-blue: hsl(225, 100%, 94%);
+	--bright-blue: hsl(245, 75%, 52%);
+	--very-pale-blue: hsl(225, 100%, 98%);
+	--desat-blue: hsl(224, 23%, 55%);
+	--dark-blue: hsl(223, 47%, 23%);
+	--bg-img-desktop: url(../images/pattern-background-desktop.svg);
+	--bg-img-mobile: url(../images/pattern-background-mobile.svg);
+}
+
+html {
+	font-size: 14px;
+}
+
+body {
+	background: var(--pale-blue);
+	background-repeat: no-repeat;
+	background-size: contain;
+	color: var(--desat-blue);
+
+	font-family: 'Red Hat Display', sans-serif;
+
+	width: 100vw;
+	height: 100vh;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/*-------
+	Style
+	-------*/
+
+.bg {
+	background: var(--bg-img-mobile);
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.main {
+	background: var(--white);
+}
+
+h1,
+.description {
+	text-align: center;
+}
+
+h1,
+h2 {
+	color: var(--dark-blue);
+}
+
+h1 {
+	font-size: 1.6rem;
+	font-weight: 900;
+}
+
+.description {
+	font-size: 1.05rem;
+	line-height: 1.75em;
+}
+
+h2 {
+	font-size: 1rem;
+	font-weight: 900;
+}
+
+.shopping-item {
+	background: var(--very-pale-blue);
+	border-radius: 10px;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.change {
+	font-weight: 700;
+	text-decoration: underline;
+	color: var(--bright-blue);
+}
+
+.change:hover {
+	text-decoration: none;
+	color: var(--desat-blue);
+}
+
+.btn {
+	font-size: 1.05rem;
+	font-weight: 900;
+	text-align: center;
+}
+
+.proceed {
+	background: var(--bright-blue);
+	color: var(--white);
+	border-radius: 9px;
+}
+
+.proceed:hover {
+	opacity: 0.7;
+}
+
+.cancel:hover {
+	color: var(--dark-blue);
+}
+
+@media (min-width: 470px) {
+	.bg {
+		background: var(--bg-img-desktop);
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+
+	h1 {
+		font-size: 1.8rem;
+	}
+
+	.description {
+		font-size: 1.05rem;
+	}
+
+	.btn {
+		font-size: 0.95rem;
+	}
+}
+
+/*-------
+	Layout
+	-------*/
+
+.bg {
+	width: 100%;
+	height: 100%;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.main {
+	width: 330px;
+	border-radius: 20px;
+	overflow: hidden;
+}
+
+.hero {
+	width: 100%;
+}
+
+.content {
+	padding: 1.8em 1.5em 1.5em;
+}
+
+h1 {
+	margin-bottom: 1em;
+}
+
+.description {
+	padding: 0 1.2em;
+}
+
+.shopping-item {
+	height: 74px;
+	
+	padding: 0 1.1em;
+	margin: 1.75em 0;
+
+	display: flex;
+	align-items: center;
+}
+
+.shopping-item label {
+	margin-left: 1.25em;
+}
+
+.music-icon {
+	width: 48px;
+}
+
+.item-label {
+	margin-bottom: 3px;
+}
+
+.change {
+	margin-left: auto;
+}
+
+.btn-wrap {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 8px;
+}
+
+.btn {
+	width: 100%;
+	padding: 1em 0;
+	box-sizing: content-box;
+}
+
+@media (min-width: 470px) {
+	html {
+		font-size: 16px;
+	}
+
+	.main {
+		width: 450px;
+		height: 700px;
+	}
+
+	.content {
+		padding: 2.2em 2.75em 0;
+	}
+
+	h1 {
+		margin-bottom: 0.7em;
+	}
+
+	.shopping-item {
+		height: 80px;
+		padding: 0 1.5em;
+		margin-bottom: 2.75em;
+	}
+
+	.btn-wrap {
+		gap: 13px;
+	}
+}
